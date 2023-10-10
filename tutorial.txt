@@ -1,0 +1,5 @@
+This file will explain each and other component and functionality across
+
+App components
+React vs React-native
+1. 

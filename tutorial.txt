@@ -1,6 +1,15 @@
 This file will explain each and other component and functionality across
 
 App components
+    - ScrollView
+    - SectionList
+    - StatusBar
+    - FlatList
+    - Image
+    - Button
+    - Text
+    - View
+
 React vs React-native
 1. Setting up
  - Windows

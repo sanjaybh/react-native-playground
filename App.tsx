@@ -65,13 +65,18 @@ const App = () => {
         backgroundColor={backgroundStyle.backgroundColor}
       />
 
-      <View _style={style.flatListCont}>
+      <View style={style.flatListCont}>
         <FlatList
           data={users}
-          keyExtractor={(user, index) => user.id}
-          renderItem={user => (
-            <Text _style={style.flatListItems}>{user.name}</Text>
-          )}
+          keyExtractor={(user, index) => {
+            return user.id;
+          }}
+          alwaysBounceVertical={false}
+          renderItem={(user) => {
+            return (
+              <Text style={style.flatListItems}>{user.name}</Text>
+            );
+          }};
         />
       </View>
 

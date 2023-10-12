@@ -2,4 +2,10 @@ This file will explain each and other component and functionality across
 
 App components
 React vs React-native
-1. 
+1. Setting up
+ - Windows
+ - MacOS
+
+2. Setting up Env variables
+3. setting up Virtual Device
+4. Launching app 

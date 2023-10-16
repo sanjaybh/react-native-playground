@@ -5,10 +5,12 @@ import {
   useColorScheme
 } from 'react-native';
 
-import APICall from './components/APICall';
+import Button from './components/Button';
 
+//import APICall from './components/APICall';
 //import FlatlistComp from './components/FlatlistComp';
 //import FlexBox from './components/FlexBox';
+
 
 function App(): JSX.Element {  
   const isDarkMode = useColorScheme() === 'dark';
@@ -19,7 +21,7 @@ function App(): JSX.Element {
   
   return (
     <>
-      <APICall />
+      <Button />
     </>
   );
 }

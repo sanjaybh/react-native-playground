@@ -27,6 +27,7 @@ function FlatlistComp(): JSX.Element {
   return (
     <>
         <View>
+        <Text style={styles.header}>Flat List Component</Text>
             <FlatList
                 data={users}
                 renderItem={({item}) => <Item name={item.name} />}
@@ -44,7 +45,13 @@ const Item = ({name}) => (
 
 export default FlatlistComp;
 
-const styles = StyleSheet.create({  
+const styles = StyleSheet.create({ 
+  header:{
+    fontSize: 20,
+    backgroundColor: 'blue',
+    color: "#fff",
+    margin: 5, padding: 5
+  }, 
   item: {
     backgroundColor: '#f9c2ff',
     padding: 10,
@@ -52,6 +59,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 8,
   },
   title: {
-    fontSize: 22,
+    fontSize: 18,
   },
 });

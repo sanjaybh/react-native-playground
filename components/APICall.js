@@ -22,6 +22,9 @@ function APICall(): JSX.Element {
     getDataFromAPI();
   }, []);
 
+  function handlePressMe(text){
+    console.warn(text)
+  }
   return (
     <>
         <View>
@@ -37,13 +40,37 @@ function APICall(): JSX.Element {
         <View style={styles.itemListContainer}>
             <Text>Total - {result?.total}</Text>
         </View>
+
+        <View>
+        <Text style={styles.header}>Flat List Component</Text>
+        <FlatList style={styles.flatlist}
+                data={result.posts}
+                renderItem={({item}) => <Item post={item} />}
+                keyExtractor={item => item.id}
+            />
+        </View>
     </>
   );
 }
 
+const Item = ({post}) => (
+  //const {title, id, body} = post;
+  <View style={styles.item}>
+    <Text style={styles.title}>{post.id}). {post.title}</Text>
+    <Text style={styles.body}>{post.body}</Text>
+    <Text style={{fontWeight:'bold'}}>{post.tags.map((item)=> <Text> - {item}</Text>)}</Text>
+  </View>
+);
+
 export default APICall;
 
 const styles = StyleSheet.create({
+  header:{
+    fontSize: 20,
+    backgroundColor: 'blue',
+    color: "#fff",
+    margin: 5, padding: 5
+  }, 
   container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
@@ -95,5 +122,23 @@ const styles = StyleSheet.create({
   highlight: {
     color: 'red',
     fontWeight: 'bold',
+  },
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 3,
+    marginVertical: 2,
+    marginHorizontal: 4,
+    marginBottom: 1
+  },
+  flatlist:{
+    borderWidth:1,
+    borderColor: '#000',
+    marginBottom: 140
+  },
+  title: {
+    fontSize: 18,
+  },
+  body: {
+    fontSize: 12,
   },
 });

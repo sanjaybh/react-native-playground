@@ -5,9 +5,9 @@ import {
   useColorScheme
 } from 'react-native';
 
-//import Flatlist from './components/FlatlistComp';
+import APICall from './components/APICall';
 
-//import APICall from './components/APICall';
+//import FlatlistComp from './components/FlatlistComp';
 //import FlexBox from './components/FlexBox';
 
 function App(): JSX.Element {  
@@ -19,7 +19,7 @@ function App(): JSX.Element {
   
   return (
     <>
-      <Text>Some text</Text>
+      <APICall />
     </>
   );
 }

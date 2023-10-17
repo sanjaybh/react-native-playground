@@ -5,7 +5,10 @@ import {
   useColorScheme
 } from 'react-native';
 
-import PressableBtn from './components/PressableBtn';
+//import StatusBarComp from './components/StatusBarComp';
+
+//import PressableBtn from './components/PressableBtn';
+
 
 //import ModalComp from './components/ModalComp';
 //import LoaderComp from './components/LoaderComp';
@@ -25,7 +28,7 @@ function App(): JSX.Element {
   
   return (
     <>
-      <PressableBtn />
+      <Text>Hello</Text>
     </>
   );
 }

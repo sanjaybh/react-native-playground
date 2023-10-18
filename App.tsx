@@ -1,15 +1,16 @@
-import React, {useEffect, useState} from 'react';
 import {
+  Button,
   Text,
-  View,
-  useColorScheme
+  View
 } from 'react-native';
+import React, {useEffect, useState} from 'react';
 
+import Navigation from './components/Navigation';
+
+//import CustModalComp from './components/CustModalComp';
+//import WebViewComp from './components/WebViewComp';
 //import StatusBarComp from './components/StatusBarComp';
-
 //import PressableBtn from './components/PressableBtn';
-
-
 //import ModalComp from './components/ModalComp';
 //import LoaderComp from './components/LoaderComp';
 //import RadioBtn from './components/RadioBtn';
@@ -18,18 +19,9 @@ import {
 //import FlatlistComp from './components/FlatlistComp';
 //import FlexBox from './components/FlexBox';
 
-
-function App(): JSX.Element {  
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? 'blue' : 'green',
-  };
-  
+function App(): JSX.Element {
   return (
-    <>
-      <Text>Hello</Text>
-    </>
+    <Navigation />
   );
 }
 

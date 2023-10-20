@@ -1,3 +1,5 @@
+/* eslint-disable react-native/no-inline-styles */
+
 import * as Animatable from 'react-native-animatable';
 
 import React, {useEffect} from 'react';
@@ -44,11 +46,16 @@ const SplashScreen = ({navigation}) => {
       <Animatable.Text
         style={{color: 'white', fontSize: 36, fontWeight: '800'}}
         duration={5000}
-        animation="zoomIn"
+        animation="zoomInUp"
         //animation={zoomOut}
         >
         Sanjay Bhan
       </Animatable.Text>
+
+      <Animatable.Text animation="slideInDown" iterationCount={5} direction="alternate">Up and down you go</Animatable.Text>
+      <Animatable.Text animation="pulse" easing="ease-out" iterationCount="infinite" style={{ textAlign: 'center' }}>❤️</Animatable.Text>
+
+
     </View>
   );
 };

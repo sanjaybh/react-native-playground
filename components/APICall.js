@@ -5,7 +5,7 @@ function APICall(): JSX.Element {
   const [result, setResult] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
-  const getDataFromAPI = async () => {    
+  const getDataFromAPI = async () => {
     try {
         setLoading(true);
       const response = await fetch('https://dummyjson.com/posts');
@@ -42,12 +42,12 @@ function APICall(): JSX.Element {
         </View>
 
         <View>
-        <Text style={styles.header}>Flat List Component</Text>
-        <FlatList style={styles.flatlist}
-                data={result.posts}
-                renderItem={({item}) => <Item post={item} />}
-                keyExtractor={item => item.id}
-            />
+          <Text style={styles.header}>Flat List Component</Text>
+          <FlatList style={styles.flatlist}
+                  data={result.posts}
+                  renderItem={({item}) => <Item post={item} />}
+                  keyExtractor={item => item.id}
+              />
         </View>
     </>
   );
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     borderColor: 'black',
     marginBottom: 7,
-    padding: 4,
+    padding: 1,
   },
   itemList: {
     fontSize: 15,
@@ -125,13 +125,13 @@ const styles = StyleSheet.create({
   },
   item: {
     backgroundColor: '#f9c2ff',
-    padding: 3,
-    marginVertical: 2,
-    marginHorizontal: 4,
+    padding: 4,
+    marginVertical: 1,
+    marginHorizontal: 1,
     marginBottom: 1
   },
   flatlist:{
-    borderWidth:1,
+    borderWidth:0,
     borderColor: '#000',
     marginBottom: 140
   },

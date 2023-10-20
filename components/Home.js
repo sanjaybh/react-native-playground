@@ -2,7 +2,8 @@ import {Button, Text, TextInput, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
 export const Home = props => {
-  const {name, age} = props.route.params;
+  //const {name, age} = props.route.params;
+  const name = 'Test'; const age=30;
   //console.warn(props.route.params)
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>

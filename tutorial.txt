@@ -18,3 +18,13 @@ React vs React-native
 2. Setting up Env variables
 3. setting up Virtual Device
 4. Launching app 
+
+Clean cache
+npm start --clean-cache
+
+# try making API calls with JSON-Server
+npm i -g json-server
+
+Created API folder and under that folder have db.json file 
+run cmd > json-server --watch db.json
+

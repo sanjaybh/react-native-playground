@@ -19,8 +19,9 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import React, {Suspense, useEffect, useState} from 'react';
 
-import SearchFlatList from './components/SearchFlatList';
+import Search from './components/Search';
 
+//import SearchFlatList from './components/SearchFlatList';
 //import MapViewScroll from './components/MapViewScroll';
 //import {countryListObj} from './Constants/index';
 //import API_JsonServer from './components/API_JsonServer';
@@ -43,13 +44,11 @@ import SearchFlatList from './components/SearchFlatList';
 
 function App(): JSX.Element {
   const [defaultCountries, setDefaultCountries] = useState([]);
-
   const isDarkMode = useColorScheme() === 'light';
-  
-    const backgroundStyle = {
-      backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-      marginTop:1
-    };
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    marginTop:1
+  };
   
   return (
     <SafeAreaView style={{flex:1, marginHorizontal:20}}>
@@ -57,7 +56,7 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       /> */}
-      <SearchFlatList />
+      <Search />
     </SafeAreaView>
     
   );

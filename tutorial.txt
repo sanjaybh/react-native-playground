@@ -28,3 +28,12 @@ npm i -g json-server
 Created API folder and under that folder have db.json file 
 run cmd > json-server --watch db.json
 
+Random API
+https://randomuser.me/api/?results=30
+
+Easy App Icon creation
+https://easyappicon.com/
+
+
+Learn React Native basics
+https://www.youtube.com/watch?v=KBWWxJdsFlY&t=37607s

@@ -1,11 +1,11 @@
-import { ActivityIndicator, FlatList, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, FlatList, Image, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import React, { useEffect, useState } from 'react';
 
 import filter from "lodash.filter";
 
 const API_ENDPOINT = `https://randomuser.me/api/?results=30`
 
-function SearchFlatList(): JSX.Element {  
+function Search(): JSX.Element {  
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -53,6 +53,11 @@ function SearchFlatList(): JSX.Element {
     }
   }
 
+  const handleUserCard = (item)=>{
+    //console.log(item)
+    console.log("testing")
+  }
+
   if(isLoading) {
     <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
         <ActivityIndicator size={'large'} color="#5500dc" />
@@ -68,7 +73,7 @@ function SearchFlatList(): JSX.Element {
   return (
     <View> 
       <TextInput 
-        placeholder='Search' 
+        placeholder='Search Users' 
         clearButtonMode='always' 
         style={styles.searchBox}
         autoCapitalize='none'
@@ -83,20 +88,22 @@ function SearchFlatList(): JSX.Element {
         data={data}
         keyExtractor={(item)=> item.login.username}
         renderItem={({item}) => (
-            <View style={styles.itemContainer}>
-                <Image source={{uri:item.picture.thumbnail}} style={styles.image} />
-                <View>
-                    <Text style={styles.textName}>{item.name.first} {item.name.last}</Text>
-                    <Text style={styles.textEmail}>{item.email}</Text>
+            <Pressable onPress={(item)=>handleUserCard(item)}>
+                <View style={styles.itemContainer} >
+                    <Image source={{uri:item.picture.thumbnail}} style={styles.image} />
+                    <View>
+                        <Text style={styles.textName}>{item.name.first} {item.name.last}</Text>
+                        <Text style={styles.textEmail}>{item.email}</Text>
+                    </View>
                 </View>
-            </View>
+            </Pressable >
         )}
     />
     </View>
   )
 }
 
-export default SearchFlatList
+export default Search
 
 const styles = StyleSheet.create({
     searchBox:{

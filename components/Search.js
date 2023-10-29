@@ -88,19 +88,25 @@ function Search(): JSX.Element {
         data={data}
         keyExtractor={(item)=> item.login.username}
         renderItem={({item}) => (
-            <Pressable onPress={(item)=>handleUserCard(item)}>
-                <View style={styles.itemContainer} >
-                    <Image source={{uri:item.picture.thumbnail}} style={styles.image} />
-                    <View>
-                        <Text style={styles.textName}>{item.name.first} {item.name.last}</Text>
-                        <Text style={styles.textEmail}>{item.email}</Text>
-                    </View>
-                </View>
-            </Pressable >
+            // <Pressable onPress={(item)=>handleUserCard(item)}>
+                <LoadCard item={item} />
+            // </Pressable >
         )}
     />
     </View>
   )
+}
+
+const LoadCard = ({item}) =>{
+    return (
+        <View style={styles.itemContainer}>
+            <Image source={{uri:item.picture.thumbnail}} style={styles.image} />
+            <View>
+                <Text style={styles.textName}>{item.name.first} {item.name.last}</Text>
+                <Text style={styles.textEmail}>{item.email}</Text>
+            </View>
+        </View>
+    )
 }
 
 export default Search

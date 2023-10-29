@@ -19,7 +19,12 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import React, {Suspense, useEffect, useState} from 'react';
 
-import Search from './components/Search';
+//import AsyncStoreComp from './components/AsyncStoreComp';
+
+//import Search from './components/Search';
+
+
+//import SplashScreen from './components/SplashScreen';
 
 //import SearchFlatList from './components/SearchFlatList';
 //import MapViewScroll from './components/MapViewScroll';
@@ -56,7 +61,7 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       /> */}
-      <Search />
+      
     </SafeAreaView>
     
   );

@@ -37,3 +37,11 @@ https://easyappicon.com/
 
 Learn React Native basics
 https://www.youtube.com/watch?v=KBWWxJdsFlY&t=37607s
+
+Async Storage
+https://react-native-async-storage.github.io/async-storage/docs/install/
+
+Element Inspector
+ - Use Element Inspector
+ - How to Open
+ - How to check Elements

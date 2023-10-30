@@ -1,6 +1,7 @@
 import {
   ActivityIndicator,
   Button,
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -10,14 +11,13 @@ import {
   View,
   useColorScheme
 } from 'react-native';
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import React, {Suspense, useEffect, useState} from 'react';
+
+import {
+  Colors
+} from 'react-native/Libraries/NewAppScreen';
+import Header from './components/Header';
+import Product from './components/Product';
 
 //import AsyncStoreComp from './components/AsyncStoreComp';
 
@@ -54,6 +54,30 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     marginTop:1
   };
+
+  const products = [
+    { 
+      id:1,
+      name:'Samsung Mobile',
+      color:'white',
+      price: 30000,
+      image: 'https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2636-thumb.png'
+    },
+    { 
+      id:2,
+      name:'Apple Mobile',
+      color:'black',
+      price: 1250000,
+      image: 'https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2636-thumb.png'
+    },
+    { 
+      id:3,
+      name:'Nokia Mobile',
+      color:'green',
+      price: 25000,
+      image: 'https://www.iconpacks.net/icons/2/free-mobile-phone-icon-2636-thumb.png'
+    }
+  ]
   
   return (
     <SafeAreaView style={{flex:1, marginHorizontal:20}}>
@@ -61,7 +85,13 @@ function App(): JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       /> */}
-      
+      <Header />
+      <ScrollView>
+      {
+        products.map((item)=><Product key={item.id} item={item} />)
+      }
+      </ScrollView>
+       
     </SafeAreaView>
     
   );

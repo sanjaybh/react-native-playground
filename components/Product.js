@@ -4,7 +4,7 @@ import {addToCart, removeFromCart} from './redux/action'
 import {useDispatch, useSelector} from 'react-redux';
 
 const Product = ({item}) => {
-    const [isAdded, setIsAdded] = useState()
+    const [isAdded, setIsAdded] = useState();
     const dispatch = useDispatch();
     const cartItems = useSelector((state)=> state.reducer)
 
@@ -27,7 +27,7 @@ const Product = ({item}) => {
     }, [cartItems]);
 
   return (
-    <View key={item.id} style={{
+    <View style={{
         alignItems:'center', 
         borderBottomColor:'orange', 
         borderBottomWidth:2, padding:10, marginBottom:30

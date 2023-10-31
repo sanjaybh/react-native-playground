@@ -1,4 +1,4 @@
-import {ADD_TO_CART, REMOVE_FROM_CART} from './config';
+import {ADD_TO_CART, REMOVE_FROM_CART, USER_LIST} from './config';
 
 export function addToCart(item){
     return {
@@ -11,5 +11,11 @@ export function removeFromCart(item){
     return {
         type: REMOVE_FROM_CART,
         data: item
+    }
+}
+
+export function getUserList(){
+    return {
+        type: USER_LIST
     }
 }

@@ -10,6 +10,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 function Navigation(): JSX.Element {
     const [input, setInput] = useState();
+
     const btnAction = () => {
         console.warn("Button clicked "+input)
     }
@@ -26,10 +27,10 @@ function Navigation(): JSX.Element {
           },
         }}>
         <Stack.Screen 
-          name="Splash Screen" 
-          component={SplashScreen}
+          name="Home Screen" 
+          component={Home}
           options={{
-            title: 'Splash Screen',
+            title: 'Home Screen',
             headerShown: false,
             headerStyle: {
               backgroundColor: '#fff',

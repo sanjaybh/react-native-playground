@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from './config';
+import { ADD_TO_CART, REMOVE_FROM_CART, SET_USER_DATA } from './config';
 
 const initialState = [];
 
@@ -14,6 +14,8 @@ export const reducer = (state = initialState, action) => {
             return item.id != action.data
         })
         return [...result]
+    case SET_USER_DATA:
+        return [action.data?.users]
     default:
         return state
  }

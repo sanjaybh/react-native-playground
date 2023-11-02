@@ -5,9 +5,9 @@ function* userList(){
     const url = "https://dummyjson.com/users";
     let data = yield fetch(url)
     data = yield data.json();
-    //data = data.users;
+    data = data.users;
     yield put({type: SET_USER_DATA, data})
-    //console.warn("saga", data.users); 
+    //console.warn("saga============================>", data.users); 
 }
 
 function* SagaData(){
